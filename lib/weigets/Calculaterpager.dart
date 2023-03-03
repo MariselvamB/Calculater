@@ -18,94 +18,90 @@ class _CalculaterPageState extends State<CalculaterPage> {
     return Scaffold(
       backgroundColor: units.darkMode ? units.ColorDark : units.ColorLight,
       body: SafeArea(
-        child: SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.all(20),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                GestureDetector(
-                  onTap: () {
-                    setState(() {
-                      units.darkMode
-                          ? units.darkMode = false
-                          : units.darkMode = true;
-                    });
-                  },
-                  child: Container(
-                    alignment: Alignment.centerLeft,
-                    child: _Switchmode(),
-                  ),
+        child: Padding(
+          padding: const EdgeInsets.all(20),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              GestureDetector(
+                onTap: () {
+                  setState(() {
+                    units.darkMode
+                        ? units.darkMode = false
+                        : units.darkMode = true;
+                  });
+                },
+                child: Container(
+                  alignment: Alignment.centerLeft,
+                  child: _Switchmode(),
                 ),
-                Column(
-                  children: [
-                    Container(
-                      margin: const EdgeInsets.only(top: 5),
-                      padding: const EdgeInsets.all(15),
-                      alignment: Alignment.centerRight,
-                      child: Text(
-                        units.input,
-                        style: TextStyle(
-                          fontSize: 40,
-                          fontWeight: FontWeight.bold,
-                          color:
-                              units.darkMode ? Colors.white : Colors.redAccent,
-                        ),
+              ),
+              Column(
+                children: [
+                  Container(
+                    margin: const EdgeInsets.only(top: 5),
+                    padding: const EdgeInsets.all(15),
+                    alignment: Alignment.centerRight,
+                    child: Text(
+                      units.input,
+                      style: TextStyle(
+                        fontSize: 40,
+                        fontWeight: FontWeight.bold,
+                        color: units.darkMode ? Colors.white : Colors.redAccent,
                       ),
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Container(
-                          margin: const EdgeInsets.only(
-                            top: 30,
-                          ),
-                          padding: const EdgeInsets.all(15),
-                          alignment: Alignment.centerRight,
-                          child: Text(
-                            "=",
-                            style: TextStyle(
-                              fontSize: 25,
-                              fontWeight: FontWeight.normal,
-                              color:
-                                  units.darkMode ? Colors.green : Colors.grey,
-                            ),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Container(
+                        margin: const EdgeInsets.only(bottom: 30, top: 30),
+                        padding: const EdgeInsets.all(15),
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          "=",
+                          style: TextStyle(
+                            fontSize: 25,
+                            fontWeight: FontWeight.normal,
+                            color: units.darkMode ? Colors.green : Colors.grey,
                           ),
                         ),
-                        Container(
-                          margin: const EdgeInsets.only(bottom: 25),
-                          padding: const EdgeInsets.all(15),
-                          alignment: Alignment.centerRight,
-                          child: Text(
-                            units.output,
-                            style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.normal,
-                              color:
-                                  units.darkMode ? Colors.green : Colors.grey,
-                            ),
+                      ),
+                      Container(
+                        margin: const EdgeInsets.only(bottom: 30, top: 30),
+                        padding: const EdgeInsets.all(15),
+                        alignment: Alignment.centerRight,
+                        child: Text(
+                          units.output,
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.normal,
+                            color: units.darkMode ? Colors.green : Colors.grey,
                           ),
                         ),
-                      ],
-                    ),
-                  ],
-                ),
-                Column(
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+              Expanded(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        _buttonRounded(
+                        _buttonOvel(
                           title: "🕑",
                           TestColors:
                               units.darkMode ? Colors.green : Colors.redAccent,
                         ),
-                        _buttonRounded(
+                        _buttonOvel(
                           title: "",
                           TestColors:
                               units.darkMode ? Colors.green : Colors.redAccent,
                         ),
-                        _buttonRounded(
+                        _buttonOvel(
                           title: "<-",
                           TestColors:
                               units.darkMode ? Colors.green : Colors.redAccent,
@@ -113,7 +109,7 @@ class _CalculaterPageState extends State<CalculaterPage> {
                       ],
                     ),
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         _buttonRounded(
                           title: "AC",
@@ -138,7 +134,7 @@ class _CalculaterPageState extends State<CalculaterPage> {
                       ],
                     ),
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         _buttonRounded(
                           title: "7",
@@ -163,7 +159,7 @@ class _CalculaterPageState extends State<CalculaterPage> {
                       ],
                     ),
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         _buttonRounded(
                           title: "4",
@@ -188,7 +184,7 @@ class _CalculaterPageState extends State<CalculaterPage> {
                       ],
                     ),
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         _buttonRounded(
                           title: "1",
@@ -213,7 +209,7 @@ class _CalculaterPageState extends State<CalculaterPage> {
                       ],
                     ),
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         _buttonRounded(
                           title: "%",
@@ -239,8 +235,8 @@ class _CalculaterPageState extends State<CalculaterPage> {
                     ),
                   ],
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),
@@ -275,7 +271,11 @@ class _CalculaterPageState extends State<CalculaterPage> {
   _buttonRounded(
       {String? title, double Padding = 1, required Color TestColors}) {
     return GestureDetector(
-      onTap: () => OnpressedFunction(title),
+      onTap: () {
+        setState(() {
+          OnpressedFunction(title);
+        });
+      },
       child: NeuContainer(
         darkMode: units.darkMode,
         borderRadius: BorderRadius.circular(50),
@@ -283,6 +283,32 @@ class _CalculaterPageState extends State<CalculaterPage> {
         Child: SizedBox(
           width: Padding * 50,
           height: Padding * 50,
+          child: Center(
+            child: Text(
+              "$title",
+              style: TextStyle(
+                  color: TestColors, fontSize: 20, fontWeight: FontWeight.w700),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  _buttonOvel({String? title, double Padding = 1, required Color TestColors}) {
+    return GestureDetector(
+      onTap: () {
+        setState(() {
+          OnpressedFunction(title);
+        });
+      },
+      child: NeuContainer(
+        darkMode: units.darkMode,
+        borderRadius: BorderRadius.circular(50),
+        Padding: EdgeInsets.all(Padding),
+        Child: SizedBox(
+          width: Padding * 60,
+          height: Padding * 35,
           child: Center(
             child: Text(
               "$title",
