@@ -1,12 +1,12 @@
 import 'package:flutter/widgets.dart';
 
-class units {
-  static Color ColorDark = Color(0xFF374352);
-  static Color ColorLight = Color(0xFFe6eeff);
+class Units {
+  static Color colorDark = const Color(0xFF374352);
+  static Color colorLight = const Color(0xFFe6eeff);
   static bool isPressed = false;
   static bool darkMode = true;
-  static double FristNumber = 0.0;
-  static double SecondNumber = 0.0;
+  static double fristNumber = 0.0;
+  static double secondNumber = 0.0;
   static var input = "";
   static bool hideinput = true;
   static var output = "";

@@ -1,21 +1,20 @@
-// ignore_for_file: file_names, non_constant_identifier_names
+// ignore_for_file: file_names
 
-import 'package:calculater/weigets/Calculaterpager.dart';
-import 'package:calculater/weigets/units.dart';
+import 'package:calculater/units/units.dart';
 import 'package:flutter/material.dart';
 
 class NeuContainer extends StatefulWidget {
   final bool darkMode;
-  final Widget Child;
+  final Widget child;
   final BorderRadius borderRadius;
-  final EdgeInsetsGeometry Padding;
+  final EdgeInsetsGeometry padding;
 
   const NeuContainer({
     Key? key,
     this.darkMode = false,
-    required this.Child,
+    required this.child,
     required this.borderRadius,
-    required this.Padding,
+    required this.padding,
   }) : super(
           key: key,
         );
@@ -32,42 +31,42 @@ class _NeuContainerState extends State<NeuContainer> {
       onPointerDown: _onPointerDown,
       child: Container(
         margin: const EdgeInsets.all(10),
-        padding: widget.Padding,
+        padding: widget.padding,
         decoration: BoxDecoration(
-            color: units.darkMode ? units.ColorDark : units.ColorLight,
+            color: Units.darkMode ? Units.colorDark : Units.colorLight,
             borderRadius: widget.borderRadius,
-            boxShadow: units.isPressed
+            boxShadow: Units.isPressed
                 ? null
                 : [
                     BoxShadow(
-                        color: units.darkMode
+                        color: Units.darkMode
                             ? Colors.black54
                             : Colors.blueGrey.shade300,
                         offset: const Offset(6.0, 6.0),
                         blurRadius: 15,
                         spreadRadius: 2),
                     BoxShadow(
-                        color: units.darkMode
+                        color: Units.darkMode
                             ? Colors.grey.shade700
                             : Colors.white,
                         offset: const Offset(-6.0, -6.0),
                         blurRadius: 15,
                         spreadRadius: 2)
                   ]),
-        child: widget.Child,
+        child: widget.child,
       ),
     );
   }
 
   _onPointerDown(PointerDownEvent event) {
     setState(() {
-      units.isPressed = true;
+      Units.isPressed = true;
     });
   }
 
   _onPointerUp(PointerUpEvent event) {
     setState(() {
-      units.isPressed = false;
+      Units.isPressed = false;
     });
   }
 }
