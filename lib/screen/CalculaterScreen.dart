@@ -5,7 +5,7 @@ import 'package:calculater/weigets/NeuContainer.dart';
 import 'package:calculater/weigets/TheamSwitchMode.dart';
 import 'package:calculater/weigets/calculateButton.dart';
 import 'package:calculater/weigets/displayWidget.dart';
-import 'package:calculater/weigets/endDrawer.dart';
+
 import 'package:calculater/units/units.dart';
 
 import 'package:flutter/material.dart';
@@ -23,14 +23,13 @@ class _CalculaterPageState extends State<CalculaterPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: const DrawerDetails(),
-      endDrawer: const EndDrawerDetails(),
       backgroundColor: Units.darkMode ? Units.colorDark : Units.colorLight,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(20),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
-            children: [TheamSwitchMode(), DisplayWidget(), CalculateButton()],
+            children: [TheamSwitchMode(), displayWidget(), calculateButton()],
           ),
         ),
       ),
@@ -72,7 +71,7 @@ class _CalculaterPageState extends State<CalculaterPage> {
     );
   }
 
-  DisplayWidget() {
+  displayWidget() {
     return Column(
       children: [
         Container(
@@ -111,7 +110,7 @@ class _CalculaterPageState extends State<CalculaterPage> {
               child: Text(
                 Units.output,
                 style: TextStyle(
-                  fontSize: 20,
+                  fontSize: 25,
                   fontWeight: FontWeight.normal,
                   color: Units.darkMode ? Colors.green : Colors.grey,
                 ),
@@ -123,7 +122,7 @@ class _CalculaterPageState extends State<CalculaterPage> {
     );
   }
 
-  CalculateButton() {
+  calculateButton() {
     return Expanded(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -131,10 +130,10 @@ class _CalculaterPageState extends State<CalculaterPage> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              ButtonOvelWidget(
-                title: "📱",
-                testColors: Units.darkMode ? Colors.green : Colors.redAccent,
-              ),
+              // ButtonOvelWidget(
+              //   title: "📱",
+              //   testColors: Units.darkMode ? Colors.green : Colors.redAccent,
+              // ),
               ButtonOvelWidget(
                 title: "<-",
                 testColors: Units.darkMode ? Colors.green : Colors.redAccent,
@@ -327,7 +326,6 @@ class _CalculaterPageState extends State<CalculaterPage> {
           Units.output = Units.output.substring(0, Units.output.length - 2);
         }
 
-        Units.input = Units.output;
         Units.hideinput = true;
       }
     } else {
