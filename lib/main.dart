@@ -1,4 +1,3 @@
-import 'package:calculater/screen/CalculaterScreen.dart';
 import 'package:calculater/screen/LogoPage.dart';
 import 'package:flutter/material.dart';
 

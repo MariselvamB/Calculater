@@ -1,8 +1,8 @@
+// ignore_for_file: file_names
+
 import 'package:calculater/screen/CalculaterScreen.dart';
 import 'package:calculater/units/units.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class LogoScreen extends StatefulWidget {
   const LogoScreen({super.key});
@@ -19,7 +19,7 @@ class _LogoScreenState extends State<LogoScreen> {
         Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => CalculaterPage(),
+              builder: (context) => const CalculaterPage(),
             ));
       },
       child: Container(

@@ -16,33 +16,27 @@ class _DrawerDetailsState extends State<DrawerDetails> {
       padding: const EdgeInsets.all(5),
       child: Drawer(
         backgroundColor: Colors.white,
-        child: ListView(
-          scrollDirection: Axis.vertical,
-          padding: const EdgeInsets.all(20),
-          children: [
-            Column(
-              children: const [
-                Card(
-                  elevation: 2,
-                  color: Colors.amber,
-                ),
-                Card(
-                  elevation: 2,
-                  color: Colors.amber,
-                ),
-                Card(
-                  elevation: 2,
-                  color: Colors.amber,
-                ),
-                Card(
-                  elevation: 2,
-                  color: Colors.amber,
-                ),
-                Card(
-                  elevation: 2,
-                  color: Colors.amber,
-                ),
-              ],
+        child: Column(
+          children: const [
+            Card(
+              elevation: 2,
+              color: Colors.amber,
+            ),
+            Card(
+              elevation: 2,
+              color: Colors.amber,
+            ),
+            Card(
+              elevation: 2,
+              color: Colors.amber,
+            ),
+            Card(
+              elevation: 2,
+              color: Colors.amber,
+            ),
+            Card(
+              elevation: 2,
+              color: Colors.amber,
             ),
           ],
         ),

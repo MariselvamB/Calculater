@@ -2,9 +2,6 @@
 
 import 'package:calculater/weigets/Drawer.dart';
 import 'package:calculater/weigets/NeuContainer.dart';
-import 'package:calculater/weigets/TheamSwitchMode.dart';
-import 'package:calculater/weigets/calculateButton.dart';
-import 'package:calculater/weigets/displayWidget.dart';
 
 import 'package:calculater/units/units.dart';
 
