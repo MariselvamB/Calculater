@@ -26,14 +26,14 @@ class _CalculaterPageState extends State<CalculaterPage> {
           padding: const EdgeInsets.all(20),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
-            children: [TheamSwitchMode(), displayWidget(), calculateButton()],
+            children: [theamSwitchMode(), displayWidget(), calculateButton()],
           ),
         ),
       ),
     );
   }
 
-  TheamSwitchMode() {
+  theamSwitchMode() {
     return GestureDetector(
       onTap: () {
         setState(() {
@@ -131,7 +131,7 @@ class _CalculaterPageState extends State<CalculaterPage> {
               //   title: "📱",
               //   testColors: Units.darkMode ? Colors.green : Colors.redAccent,
               // ),
-              ButtonOvelWidget(
+              buttonOvelWidget(
                 title: "<-",
                 testColors: Units.darkMode ? Colors.green : Colors.redAccent,
               ),
@@ -140,19 +140,19 @@ class _CalculaterPageState extends State<CalculaterPage> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              ButtonRoundedWidget(
+              buttonRoundedWidget(
                 title: "AC",
                 testColors: Units.darkMode ? Colors.green : Colors.redAccent,
               ),
-              ButtonRoundedWidget(
+              buttonRoundedWidget(
                 title: "(",
                 testColors: Units.darkMode ? Colors.green : Colors.redAccent,
               ),
-              ButtonRoundedWidget(
+              buttonRoundedWidget(
                 title: ")",
                 testColors: Units.darkMode ? Colors.green : Colors.redAccent,
               ),
-              ButtonRoundedWidget(
+              buttonRoundedWidget(
                 title: "÷",
                 testColors: Units.darkMode ? Colors.green : Colors.redAccent,
               ),
@@ -161,19 +161,19 @@ class _CalculaterPageState extends State<CalculaterPage> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              ButtonRoundedWidget(
+              buttonRoundedWidget(
                 title: "7",
                 testColors: Units.darkMode ? Colors.white : Colors.black,
               ),
-              ButtonRoundedWidget(
+              buttonRoundedWidget(
                 title: "8",
                 testColors: Units.darkMode ? Colors.white : Colors.black,
               ),
-              ButtonRoundedWidget(
+              buttonRoundedWidget(
                 title: "9",
                 testColors: Units.darkMode ? Colors.white : Colors.black,
               ),
-              ButtonRoundedWidget(
+              buttonRoundedWidget(
                 title: "X",
                 testColors: Units.darkMode ? Colors.green : Colors.redAccent,
               ),
@@ -182,19 +182,19 @@ class _CalculaterPageState extends State<CalculaterPage> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              ButtonRoundedWidget(
+              buttonRoundedWidget(
                 title: "4",
                 testColors: Units.darkMode ? Colors.white : Colors.black,
               ),
-              ButtonRoundedWidget(
+              buttonRoundedWidget(
                 title: "5",
                 testColors: Units.darkMode ? Colors.white : Colors.black,
               ),
-              ButtonRoundedWidget(
+              buttonRoundedWidget(
                 title: "6",
                 testColors: Units.darkMode ? Colors.white : Colors.black,
               ),
-              ButtonRoundedWidget(
+              buttonRoundedWidget(
                 title: "-",
                 testColors: Units.darkMode ? Colors.green : Colors.redAccent,
               ),
@@ -203,19 +203,19 @@ class _CalculaterPageState extends State<CalculaterPage> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              ButtonRoundedWidget(
+              buttonRoundedWidget(
                 title: "1",
                 testColors: Units.darkMode ? Colors.white : Colors.black,
               ),
-              ButtonRoundedWidget(
+              buttonRoundedWidget(
                 title: "2",
                 testColors: Units.darkMode ? Colors.white : Colors.black,
               ),
-              ButtonRoundedWidget(
+              buttonRoundedWidget(
                 title: "3",
                 testColors: Units.darkMode ? Colors.white : Colors.black,
               ),
-              ButtonRoundedWidget(
+              buttonRoundedWidget(
                 title: "+",
                 testColors: Units.darkMode ? Colors.green : Colors.redAccent,
               ),
@@ -224,19 +224,19 @@ class _CalculaterPageState extends State<CalculaterPage> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              ButtonRoundedWidget(
+              buttonRoundedWidget(
                 title: "%",
                 testColors: Units.darkMode ? Colors.green : Colors.redAccent,
               ),
-              ButtonRoundedWidget(
+              buttonRoundedWidget(
                 title: "0",
                 testColors: Units.darkMode ? Colors.white : Colors.black,
               ),
-              ButtonRoundedWidget(
+              buttonRoundedWidget(
                 title: ".",
                 testColors: Units.darkMode ? Colors.white : Colors.black,
               ),
-              ButtonRoundedWidget(
+              buttonRoundedWidget(
                 title: "=",
                 testColors: Units.darkMode ? Colors.green : Colors.redAccent,
               ),
@@ -247,7 +247,7 @@ class _CalculaterPageState extends State<CalculaterPage> {
     );
   }
 
-  ButtonOvelWidget(
+  buttonOvelWidget(
       {required String title, double padding = 1, required Color testColors}) {
     return GestureDetector(
       onTap: () {
@@ -274,7 +274,7 @@ class _CalculaterPageState extends State<CalculaterPage> {
     );
   }
 
-  ButtonRoundedWidget(
+  buttonRoundedWidget(
       {required String title, double padding = 1, required Color testColors}) {
     return GestureDetector(
       onTap: () {
