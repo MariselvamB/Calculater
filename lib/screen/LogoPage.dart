@@ -28,6 +28,8 @@ class _LogoScreenState extends State<LogoScreen> {
       color: Units.darkMode ? Units.colorDark : Units.colorLight,
       child: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Image.asset(
               "assets/Logo.png",
@@ -53,7 +55,7 @@ class _LogoScreenState extends State<LogoScreen> {
                     spreadRadius: 2,
                   ),
                 ],
-                fontSize: 40,
+                fontSize: 20,
                 fontWeight: FontWeight.w700,
               ),
             ),
