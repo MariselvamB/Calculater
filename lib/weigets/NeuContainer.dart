@@ -36,7 +36,23 @@ class _NeuContainerState extends State<NeuContainer> {
             color: Units.darkMode ? Units.colorDark : Units.colorLight,
             borderRadius: widget.borderRadius,
             boxShadow: Units.isPressed
-                ? null
+                ? [
+                    BoxShadow(
+                      color:
+                          Units.darkMode ? Colors.grey.shade700 : Colors.white,
+                      offset: const Offset(10, 10),
+                      blurRadius: 15,
+                      spreadRadius: 2,
+                    ),
+                    BoxShadow(
+                      color: Units.darkMode
+                          ? Colors.black54
+                          : Colors.blueGrey.shade300,
+                      offset: const Offset(-10, -10),
+                      blurRadius: 15,
+                      spreadRadius: 2,
+                    ),
+                  ]
                 : [
                     BoxShadow(
                         color: Units.darkMode
@@ -44,7 +60,7 @@ class _NeuContainerState extends State<NeuContainer> {
                             : Colors.blueGrey.shade300,
                         offset: const Offset(6.0, 6.0),
                         blurRadius: 15,
-                        spreadRadius: 2),
+                        spreadRadius: 1),
                     BoxShadow(
                         color: Units.darkMode
                             ? Colors.grey.shade700
